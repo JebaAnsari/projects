@@ -1,0 +1,16 @@
+Js execution 
+global execution
+    |
+    this
+    |
+    Memeory Phase
+    |
+    Execution Phase
+control flow -> if/else 
+?? operator -> for aviding null values
+ternary oprator -> ?
+syntax -> condition ? true:false
+
+loops ->for , forEach(),
+
+forin loop is used for objects
