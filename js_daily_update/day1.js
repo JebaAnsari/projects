@@ -85,10 +85,50 @@ const myArray = ["Jeba","Ansari"];
 // }
 
 // forin loop for objects
-const myObjects = {
-    name:"jeba",
-    age:34
-}
-for (const key in myObjects) {
-   console.log(`${key} shortcut is ${myObjects[key]}`);
-}
+// const myObjects = {
+//     name:"jeba",
+//     age:34
+// }
+// for (const key in myObjects) {
+//    console.log(`${key} shortcut is ${myObjects[key]}`);
+// }
+
+const db = ["jeba","ansari","naaz",43];
+const print = db.forEach((item)=>{
+    // console.log(item);
+    return item;
+});
+console.log(print);
+
+const table  = ["name","rollNo.","class"];
+table.forEach((i)=>{
+    // console.log(i);
+})
+
+let sum = [2,1,4,5];
+sum.forEach((i)=>{
+    // console.log(i);
+})
+
+// filter 
+const array = [2,1,3,4,6,4,7,8,9];
+// const multiple = array.filter((i)=> {
+//     return i>4;
+// });
+// console.log(multiple);
+// const small = array.filter((i)=>i<6);
+// const multiples = array.filter((i)=>i%2==0);
+// console.log(`the smaller than 6 are ${small.sort()} and multiple of 2 are ${multiples}` );
+
+// const newNums = [];
+// array.forEach((num)=>{
+//     if(num<3){
+//         newNums.push(num);
+//     }
+// });
+// console.log(newNums);
+const myNums = [1,2,3,4];
+const newNums = myNums.map((num)=>{
+    return num+1;
+})
+console.log(newNums);
