@@ -16,3 +16,5 @@ loops ->for , forEach(),
 forin loop is used for objects
 forEach loop 
 filter() -> it gives callback
+
+inner.HTML also shows html content nut inner.text does not 
