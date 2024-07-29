@@ -14,3 +14,5 @@ syntax -> condition ? true:false
 loops ->for , forEach(),
 
 forin loop is used for objects
+forEach loop 
+filter() -> it gives callback
