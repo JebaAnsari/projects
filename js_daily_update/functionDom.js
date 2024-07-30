@@ -17,7 +17,7 @@ function addPara(name){
     document.querySelector('.parent').appendChild(newText);
 }
 addPara('<i class="fa-solid fa-eye"></i>');
-// optimised code
+// optimised code 
 function addNode(node){
     const h = document.createElement('h1');
     h.appendChild(document.createTextNode(node));
