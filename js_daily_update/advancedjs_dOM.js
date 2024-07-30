@@ -29,7 +29,7 @@ button.style.border = "none";
 button.style.margin="5px";
 
 const para = document.createElement('p');
-const text  = document.createTextNode('hay js is compiled langueage or not ?');
+const text  = document.createTextNode('hay js is com piled langueage or not ?');
 para.appendChild(text);
 document.body.appendChild(para);
 
