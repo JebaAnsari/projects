@@ -25,22 +25,17 @@
    
 
     <script>
-        let intervalId; // Declare a variable to hold the interval ID
-
-const start = function() {
-    console.log('started printing !..');
-}
-
-document.querySelector('#start').addEventListener('click', function() {
-    // Store the interval ID
-    intervalId = setInterval(start, 1000);
-});
-
-document.querySelector('#stop').addEventListener('click', function() {
-    clearInterval(intervalId); // Use the stored interval ID
-    console.log('stopped successfully');
-});
-
+        const start = function(){
+            console.log('started printing !..');
+        }
+        document.querySelector('#start').addEventListener('click',function(){
+          let event =   setInterval(start,1000);
+        })
+    
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearInterval(event);
+            console.log('stopped successfully');
+        })
 
        
 
