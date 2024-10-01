@@ -3,56 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unlimited colors</title>
-    <style>
-        body{
-            margin: 0px;
-            padding: 0px;
-            background-color: rgb(160, 159, 159);
-            color: white;
-            font-weight: bolder;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        button{
-            padding: 10px 25px 10px 25px;
-            margin: 3px;
-            background-color: black;
-            color: white;
-            border-radius: 5px;
-            text-align: center;
-            
-        }
-        .container{
-            text-align: center;
-        }
-    </style>
-    
+    <title>Document</title>
 </head>
 <body>
-    <h1>Background Color Should change after every second</h1>
     <div class="container">
-    <button id="start">start</button>
-    <button id="stop">stop</button>
-</div>
+        <h1>Unlmited Color changing</h1>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+    <script>
+        let intervalID;
+        const randomColor = function(){
+            const hex = '0123456789ABCDEF';
+            let color = '#';
+          for(let i = 0;i<6;i++){
+            color += hex[Math.floor(Math.random()*16)];
+          }
+          return color;
+        }
+        const change = function(){
+            document.body.style.backgroundColor = randomColor();
+        }
+        const startChanging = function(){ 
+            if(!intervalID){
+                intervalID = setInterval(change,100); 
+           
+            }    
+            console.log(randomColor());
+        }
+        const stopChanging = function(){
+            clearInterval(intervalID);
+            intervalID = null;
+            console.log(`the last color code is ${randomColor()}`);
+        }
+        document.querySelector('#start').addEventListener('click',startChanging);
+        document.querySelector('#stop').addEventListener('click',stopChanging);
 
-<script>
-    const start = document.querySelector('#start');
-    const stop = document.querySelector('#stop');
-
-    // generate a random color with randon hexValue
-    const changeColor = function(){
-
-    }
-    start.addEventListener('click',function(){
-      let change =   setInterval(,1000)
-    })
-    stop.addEventListener('click',function(){
-        clearInterval(change);
-    })
-
-</script>
+    </script>
 </body>
 </html>
