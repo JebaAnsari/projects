@@ -57,3 +57,52 @@ const promiseFour = new Promise(function(resolve,reject){
 }).finally(()=>{
     console.log('i am always executed');
 });
+
+// Promise 5
+const PromiseFive = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error = true;
+        if(!error){
+            resolve({username:'Jeba',work:'Promise5'});
+            resolve();
+        }
+        else{
+            reject('Promisefive falied');
+        }
+    },1000)
+})
+
+// async is similar like .then ,.catch is used to accept or reject the promise and await keyword is used in async function and promise is an object so ,it cant be wriiten like Promise() thi  
+async function consumedPromisefive()
+{
+    try {
+        const response = await PromiseFive;
+    console.log(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+consumedPromisefive();
+
+// fetch is a library used in asnc function with await keyword to fetch data and initialy data is ini string so we need to store it in a variable and convert it into json like this 
+
+// async function getAllusers(){
+//    try {
+//     const resurl = await fetch('https://jsonplaceholder.typicode.com/users');
+//    const data =  await resurl.json();
+//    console.log(data);
+
+//    } catch (error) {
+//     console.log('E',error);
+//    }
+// }
+// getAllusers();
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response)=>{
+   return response.json();
+})
+.then((data)=>{
+    console.log(data);
+})
+.catch((error)=> console.log(error));
