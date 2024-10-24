@@ -1,9 +1,4 @@
- // Q and bluebird are two libraries used in js with bluebird we use functionlity like ftech,catch,finally etc.
-// Promises has two states (resolve and reject)
-// reject is concerned with .then
-// how to run js file in terminal give command-> node filename.js
-// to store Promise in variable is not neccessary
-// if we pass any parametere in resolve then we can get in .then function as an argument
+ 
 const PromiseOne = new Promise(function(resolve,reject){
     setTimeout(function(){
         console.log('Async task is completed');
