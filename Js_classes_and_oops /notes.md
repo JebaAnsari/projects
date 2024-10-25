@@ -16,6 +16,8 @@ Inheritance ->
 Polymorphism
 
 
+on defining new keyword a new empty object created -> instance 
+
 
 <!--  -->
 
